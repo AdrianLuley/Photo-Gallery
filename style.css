@@ -1,23 +1,9 @@
-@media screen {
-    width: 100vh;
-    height: 100vh;
-}
-@media (min-width: 350px) {
-    .container {
-      column-count: 2;
-    }
-  }
-  @media (min-width: 900px) {
-    .container {
-      column-count: 3;
-    }
-  }
 body {
     background-color: red;
-    
-
-  
+    display: flex;
+    flex-direction: column;
 }
+
 .heading {
     font-size: 30px;
     font-family: Helvetica;
@@ -27,49 +13,91 @@ body {
     border-bottom: 5px;
     width: 100%;
 }
+
 #Name {
     font-size: 18px;
     text-align: right;
+}
+
+ul {
+    position: relative;
+    top: -5px;
 }
 
 li a:hover {
     text-decoration: none;
     color: white;
 }
+
 ul li {
     display: inline;
     margin: 10px;
 }
+
 a {
     text-decoration-style: none;
     color: black;
 }
+
 main {
     display: flex;
     justify-content: center;
-    width: 900px;
-    margin: 0 auto;
-    
+    width: 500px;
+    flex-direction: column;
     
 }
+
 .container {
-    width: 70%;
+   
     border: 2px solid black;
-    height: 900px;;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
-   flex-grow: 1;
-   justify-content: space-between;
-   overflow: scroll;
-   column-count: 3;
+    flex-grow: 1;
+    overflow: scroll;
+    
+    
 }
+
 img {
     height: 150px;
     width: 236px;
+    margin: 5px;
 }
+
 .pictures p {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 16px;
     text-align: center;
+}
+
+@media (min-width: 900px) {
+    body {
+        flex-direction: row;
+        height: 100%;
+  
+    }
+    .heading {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .heading p {
+        align-self: center;
+    }
+ul {
+    top: 70%;
+    position: relative;
+    right: 15px;
+}
+
+
+    main {
+        height: 50%;
+        width: 75%;
+        float: right;
+        top: 200px;
+        position: relative;
+    }
 }
